@@ -1,6 +1,6 @@
 # Poe2ItemPriceDump
 
-A comprehensive dataset containing historical price logs collected by [poe2scout.com](https://poe2scout.com) throughout the league.
+A comprehensive dataset containing historical price logs collected by [poe2scout.com](https://poe2scout.com) through the 0.1.0 Standard and Hardcore Leagues.
 
 ## Data Description
 
