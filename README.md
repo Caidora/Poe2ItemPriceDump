@@ -25,7 +25,3 @@ The quantity field indicates relative item scarcity over time. While useful for 
 - All data is collected through poe2scout's price logging system
 - Historical price trends can be analyzed across both Standard and Hardcore leagues
 - Early logs may have incomplete normalization data
-
-## Future Improvements
-- Enhanced quantity tracking system planned for upcoming leagues
-- Better accuracy for non-currency item quantity measurements
