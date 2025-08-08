@@ -1,27 +1,39 @@
+
 # Poe2ItemPriceDump
 
-A comprehensive dataset containing historical price logs collected by [poe2scout.com](https://poe2scout.com) through the 0.1.0 Standard and Hardcore Leagues.
+A comprehensive dataset containing historical price logs collected by [poe2scout.com](https://poe2scout.com).
 
 ## Data Description
 
-The data is stored in `hardcore_logs.csv` and `standard_logs.csv` and contains detailed price tracking information for items in Path of Exile 2.
+The data is stored in `hardcore_logs.csv` and `standard_logs.csv`. These files contain detailed price tracking information for items in Path of Exile 2.
 
-### Fields Explanation
+### Fields Explained
 
-- **price**: The raw price value of the item
-- **currency_string_id**: The currency type used for the price (e.g., "exalted", "divine")
-- **nominal_price**: Normalized price converted to equivalent exalted orb value at the time of logging
-  - Example: If an item costs 50 Divine Orbs, the nominal_price would be the equivalent value in Exalted Orbs based on the exchange rate at that time
-  - Note: Some early logs may be missing this normalization
+Data logs are formatted differently based on the league they were collected in.
 
-### League Identifiers
-- **pbestandard1**: Standard League data
-- **pbehardcore1**: Hardcore League data
+#### **poe2_league1**
 
-### Quantity Data
-The quantity field indicates relative item scarcity over time. While useful for tracking trends in item availability, the absolute values should not be taken as exact representations, especially for non-currency items. This metric will be improved in future leagues.
+- **price**: The raw price value of the item.
+- **currency_string_id**: The currency type used for the price (e.g., "exalted", "divine").
+- **nominal_price**: The normalized price converted to the equivalent value in **Exalted Orbs** at the time of logging.
+  - *Example:* If an item cost 50 Divine Orbs, the `nominal_price` would be the equivalent value in Exalted Orbs based on the exchange rate at that time.
+  - *Note:* Some early logs may be missing this normalization.
 
-## Notes
-- All data is collected through poe2scout's price logging system
-- Historical price trends can be analyzed across both Standard and Hardcore leagues
-- Early logs may have incomplete normalization data
+#### **poe2_dawnOfTheHunt**
+
+- **price**: The value of the item, presented in **Exalted Orbs**.
+
+## Notes for each league
+
+### **poe2_league1**
+
+This league's early logs may have incomplete normalization data.
+
+### **poe2_dawnOfTheHunt**
+
+This league saw a change in the data schema. The format is different from previous leagues but will be more consistent going forward.
+
+---
+## Quantity Data
+
+The `quantity` field indicates an item's relative scarcity over time. While useful for tracking trends in availability, the absolute values should not be considered exact representations, especially for non-currency items.
